@@ -1,5 +1,18 @@
 <html>
 <body>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+        skipTags: ["script","noscript","style","textarea"]
+    }
+  });
+</script> 
+
+
+
+<title>MacLean: Data</title>
 <h1 style="text-align: center;">Data</h1>
 <h2>Old School</h2>
 <p style="text-align: center;"> 
@@ -23,21 +36,29 @@
 </table>
 </p>
 <h2>New School</h2>
-<h3>Subrange 0..n-1 of &#918;</h3>
-<p style="font-family:courier;">Nat&lt;n&gt;
-<a href="index.html">Home</a> 
-<h3>Abstractios</h3>
-<table>
-<tr>
-<td>Group</td>
-</tr>
-<tr>
-<td>Ring</td>
-</tr>
-<tr>
-<td>Field</td>
-</tr>
-</table>
+<h3>One data type</h3>
+<pre>
+  5 : 7 : Data<2^64>
+  |   ^     ^   ^
+  |   |     |   |
+  |   |     |   +- Representation size
+  |   |     +- Category
+  |   +- Type subrange 0..6
+  +- Value
+</pre>
+
+We begin by considering the family of \(\verb|Data&lt;r&gt;| \)
+full subcategories of the distributive category \(Set\)
+whose objects, or types, are sets consisting of integers in the rannge \(0..n-1\), where \(n \lt r\).
+
+This category has finite products and sums up to the representation size \(r\).
+
+Within a specific data category, when it is unambiguous, we shall denote the type of 5 elements by
+<pre>
+5
+</pre>
+
+<a href="operators.html">Operators</a> 
 
 </body>
 </html>

@@ -1,0 +1,41 @@
+<html>
+<body>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+        skipTags: ["script","noscript","style","textarea"]
+    }
+  });
+</script> 
+
+
+
+<title>MacLean: Products</title>
+<h1 style="text-align: center;">Products</h1>
+
+<p>MacLean provides a family of <em>functors</em> which construct <em>products</em>.
+For two values \(x:5\) and \(y:7\) the resulting value is 
+<pre>
+prod : (5,7)  -&gt; 35 
+       (x,y) = x * 7 + y
+</pre>
+with two projections <em>projections</em>:
+<pre>
+  prj0 : 35 -&gt; 5  
+         x = z udiv 7
+  prj1 : 35 -&gt; 7 
+         y = z umod 7 
+</pre>
+
+The notation <code>5 * 7</code> is commonly used to represent the product.
+Note that the term denotes the constructor, as will as the two projections:
+the actual type targetted by the constructor is just \(32\) which is also
+the domain of the prohections.
+
+<p><a href="sums.html">Sums</a> 
+
+</body>
+</html>
+

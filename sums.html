@@ -1,0 +1,48 @@
+
+<html>
+<body>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+        skipTags: ["script","noscript","style","textarea"]
+    }
+  });
+</script> 
+
+
+
+<title>MacLean: Sums</title>
+<h1 style="text-align: center;">Sums</h1>
+
+<p>MacLean provides a family of <em>functors</em> which construct <em>sums</em>.
+A sum of (x:5) and (y:7) is constructed by picking one and injecting it with 
+one of the the encodings
+<pre>
+inj0: 5 -&gt; 12 
+      z = x + 7
+inj1: 7 -&gt; 12 
+      z = y
+</pre>
+
+Decoding a sum requires determining which injector was used to construct it,
+along with extracting the value injected. This is usually done with a <em>case</em>
+construction:
+<pre>
+case z of
+  0 : 11..7 =&gt; z - 7 : 5
+  1 : 6..0 =&gt; z : 7
+</pre>
+
+
+The notation <code>5 + 7</code> is commonly used to represent the sum.
+Note that the term denotes the two constructing injections, as well as the decoder.
+The actual type targetted by the injections is just \(12\) which is also
+the domain of the decoder.
+
+<p><a href="sums.html">Sums</a> 
+
+</body>
+</html>
+

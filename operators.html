@@ -1,0 +1,46 @@
+<html>
+<body>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+        skipTags: ["script","noscript","style","textarea"]
+    }
+  });
+</script> 
+
+
+
+<title>MacLean: Operators</title>
+<h1 style="text-align: center;">Operators</h1>
+For some data category, a subcategory is used to specify a record of named operators
+from which particalar operator may be chosen. For example
+<pre>
+3 : 5 : Ring . neg
+</pre>
+selects the negation operator of the ring of 5 elements and composes it with
+the constant 3 to produce the constant 2.
+
+MacLean is a category theoretic languagte meaning composition, not application,
+is the fundamental operation. A constant such as <code>5 : 7<code> is an arrow
+<pre>
+3: 1 -&gt; 7
+</pre>
+which picks out the value 3 from the set 7. The result of the computation
+is therefore the arrow
+<pre>
+2: 1 -&gt; 7
+</pre>
+
+Note carefully the type 5 is not a ring.  There is only one data type
+in MacLean, the subranges of integers. These types are the objects
+of the data categories. All type information is abstract, that is,
+it is conveyed by restricting a data category to a subcategory which
+restricts the visible arrow set to combinations of operators it specifies.
+
+<a href="products.html">Products</a> 
+
+</body>
+</html>
+
